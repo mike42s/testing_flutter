@@ -23,8 +23,12 @@ class _MyAppState extends State<MyApp> {
         body: Row(
           children: [
             Column(
+              mainAxisSize: MainAxisSize.min,
               children: const [
-                Text("Oeschinen Lake Campground"),
+                Text(
+                  "Oeschinen Lake Campground",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+                ),
                 Text("Kanderstag, Switzerland")
               ],
             ),
