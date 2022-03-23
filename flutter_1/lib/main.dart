@@ -20,21 +20,28 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text("Aplikasi Pertama"),
         ),
-        body: Row(
-          children: [
-            Column(
-              mainAxisSize: MainAxisSize.min,
-              children: const [
-                Text(
-                  "Oeschinen Lake Campground",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
-                ),
-                Text("Kanderstag, Switzerland")
-              ],
-            ),
-            const Icon(Icons.star, color: Colors.red),
-            const Text("41")
-          ],
+        body: Container(
+          padding: EdgeInsets.all(8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "Oeschinen Lake Campground",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),
+                  ),
+                  Text("Kanderstag, Switzerland",
+                      style: TextStyle(color: Colors.green, fontSize: 16.0))
+                ],
+              ),
+              const Icon(Icons.star, color: Colors.red),
+              const Text("41")
+            ],
+          ),
         ),
       ),
     );
